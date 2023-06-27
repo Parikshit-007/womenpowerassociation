@@ -39,6 +39,7 @@ class Professional(Profile):
         ('education', 'Education'),
         ('food_industries', 'Food Industries'),
         ('advocates', 'Advocates'),
+        ('entrepreneur', 'Entrepreneur'),
     ]
 
     address = models.CharField(max_length=200)

@@ -11,6 +11,8 @@ def home(request):
 def aboutus(request):
     return render(request, 'aboutus.html')
 
+def contactus(request):
+    return render(request, 'contactus.html')
 
 from django.shortcuts import get_object_or_404, render
 from main.models import Profile, Professional

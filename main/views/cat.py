@@ -70,6 +70,10 @@ def separate_profession(request, profession):
         advocates = Professional.objects.filter(profession='advocates', is_verified=True)
         verified_count = advocates.count()
         return render(request, 'advocates.html', {'advocates': advocates, 'current_date': date.today(), 'verified_count': verified_count})
+    elif profession == 'entrepreneur':
+        entrepreneur= Professional.objects.filter(profession='entrepreneur', is_verified=True)
+        verified_count = advocates.count()
+        return render(request, 'entrepreneur.html', {'entrepreneur': entrepreneur, 'current_date': date.today(), 'verified_count': verified_count})
     else:
         # Handle the case when an invalid profession is selected
         return redirect('home')  # Redirect to the home page or any other desired page

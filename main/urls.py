@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from .views.homepage import home, aboutus, FullView
+from .views.homepage import home, aboutus, FullView, contactus
 from .views.login import user_login, user_logout
 from .views.signup import user_signup
 from main.views.cat import professionals_by_profession, separate_profession
@@ -16,6 +16,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='main/', permanent=True)),
     path("main/", home, name='home'),
     path("main/aboutus/", aboutus, name='aboutus'),
+    path("main/contactus/", contactus, name='contactus'),
     path("main/login/", user_login, name='login'),
     path("main/signup/", user_signup, name='signup'),
     path('main/professionals/<str:profession>/', professionals_by_profession, name='professionals_by_profession'),
