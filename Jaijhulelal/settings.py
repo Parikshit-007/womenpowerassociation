@@ -142,3 +142,8 @@ EMAIL_PORT = 587
 #EMAIL_HOST_PASSWORD = 'your_password'
 EMAIL_USE_TLS = True  # Use TLS encryption for secure connection
 EMAIL_USE_SSL = False  # Use SSL encryption for secure connection (if required)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
