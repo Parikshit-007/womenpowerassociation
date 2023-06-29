@@ -14,6 +14,9 @@ def aboutus(request):
 def contactus(request):
     return render(request, 'contactus.html')
 
+def terms_condition(request):
+    return render(request, 'terms-condition')
+
 from django.shortcuts import get_object_or_404, render
 from main.models import Profile, Professional
 

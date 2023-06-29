@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['156.67.214.154', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'main',
+    
     'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,16 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST="sandbox.smtp.mailtrap.io"
+EMAIL_HOST_USER = 'ganaaisfree@gmail.com' # Enter your email here
+EMAIL_HOST_PASSWORD = 'caogccktquweprip' # Enter your password here
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+#EMAIL_HOST_USER = 'your_username'
+#EMAIL_HOST_PASSWORD = 'your_password'
+EMAIL_USE_TLS = True  # Use TLS encryption for secure connection
+EMAIL_USE_SSL = False  # Use SSL encryption for secure connection (if required)

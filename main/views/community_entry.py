@@ -18,6 +18,7 @@ def request_community_entry(request):
         address = request.POST.get('address')
         phone_number = request.POST.get('phone_number')
         user_input = request.POST.get('user_input')
+        desc =request.POST.get('desc')
 
         # Check if user entered a new profession
         if user_input:
@@ -36,10 +37,11 @@ def request_community_entry(request):
             professional.phone_number = phone_number
             professional.profession = profession
             professional.ref_num = random.randint(1000, 9999)
+            professional.desc = desc
             professional.save()
         except Professional.DoesNotExist:
             # No Professional instance exists for the user, create a new one
-            Professional.objects.create(user=user, address=address, phone_number=phone_number, profession=profession, ref_num=random.randint(1000, 9999))
+            Professional.objects.create(user=user, address=address, phone_number=phone_number, profession=profession, ref_num=random.randint(1000, 9999), desc=desc)
 
         return redirect('community_entry_success')  # Redirect to a success page
 

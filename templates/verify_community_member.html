@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> {% extends 'basic.html' %} {% load static %}
+<html lang="en">
+{% block body %}
 
 <head>
     <title>Verify Community Member</title>
@@ -11,6 +12,16 @@
         {% csrf_token %}
         <input type="submit" value="Verify">
     </form>
+</body>{% endblock %} {% block footer %} {% endblock %}
+<!-- 
+Essential Scripts
+=====================================-->
+{% block script %}
+<!-- Your additional JavaScript code goes here -->
+{% endblock %}
+
 </body>
+
+</html>
 
 </html>

@@ -1,11 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib import admin
+class ProfileManager(models.Manager):
+    def get_queryset(self, *args, **kwargs):
+        return super(ProfileManager, self).get_queryset(*args, **kwargs).filter()
+
+    def create(self, *args, **kwargs):
+        raise NotImplementedError("You cannot create Profile objects directly. Use a subclass instead.")
+
 
 class Profile(models.Model):
     boolChoice = (("M", "Male"), ("F", "Female"))
     user = models.OneToOneField(User, on_delete=models.CASCADE, default=None)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
     otp = models.CharField(max_length=6, null=True, blank=True)
     profile_image = models.ImageField(upload_to='media/', blank=True)
     gender = models.CharField(max_length=10, choices=boolChoice, null=True)
@@ -16,7 +23,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
-    objects = models.Manager()
+    objects = ProfileManager()
 
     class Meta:
         abstract = True
@@ -43,7 +50,7 @@ class Professional(Profile):
     ]
 
     address = models.CharField(max_length=200)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
     profession = models.CharField(max_length=50, choices=PROFESSION_CHOICES, blank=True, null=True)
     desc = models.TextField(max_length=500, default='')
     is_verified = models.BooleanField(default=False)
