@@ -31,7 +31,8 @@ def user_signup(request):
                 messages.error(request, 'Email already exists.')
             else:
                 user = User.objects.create_user(username=username, email=email, password=password, first_name=first_name, last_name=last_name)
-                profile = Professional.objects.create(user=user, phone_number=phone_number, gender=gender, birthdate=birthdate, reference=reference, ref_num=ref_num, profile_image=profile_image, Sindhi_Sub_Caste=sindhi_sub_caste)
+                profile = Professional.objects.create_professional(user=user, phone_number=phone_number, gender=gender, birthdate=birthdate, reference=reference, ref_num=ref_num, profile_image=profile_image, Sindhi_Sub_Caste=sindhi_sub_caste)
+             #   profile = Professional.objects.create(user=user, phone_number=phone_number, gender=gender, birthdate=birthdate, reference=reference, ref_num=ref_num, profile_image=profile_image, Sindhi_Sub_Caste=sindhi_sub_caste)
                 messages.success(request, 'Account created successfully. Please login.')
                 return redirect('login')
         else:

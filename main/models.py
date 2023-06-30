@@ -5,9 +5,11 @@ class ProfileManager(models.Manager):
     def get_queryset(self, *args, **kwargs):
         return super(ProfileManager, self).get_queryset(*args, **kwargs).filter()
 
-    def create(self, *args, **kwargs):
-        raise NotImplementedError("You cannot create Profile objects directly. Use a subclass instead.")
-
+   
+    def create_professional(self, user, **kwargs):
+        return self.model.objects.create(user=user, **kwargs)
+    
+    
 
 class Profile(models.Model):
     boolChoice = (("M", "Male"), ("F", "Female"))
