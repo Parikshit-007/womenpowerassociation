@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from main.models import Profile, Professional
+from main.models import Profile, Professional, Contact
 
 # Create your views here.
 
@@ -10,9 +10,17 @@ def home(request):
 
 def aboutus(request):
     return render(request, 'aboutus.html')
-
 def contactus(request):
-    return render(request, 'contactus.html')
+    thank = False
+    if request.method=="POST":
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('phone', '')
+        desc = request.POST.get('desc', '')
+        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact.save()
+        thank = True
+    return render(request, 'contactus.html', {'thank': thank})
 
 def terms_condition(request):
     return render(request, 'terms-condition')

@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q
 from main.models import Professional
-
 def search(request):
     query = request.GET.get('q', '')  # Get the search query from the request
     name_results = request.GET.get('name_results', '')  # Get the name search query from the request
@@ -23,6 +22,7 @@ def search(request):
         'name_results': name_results,
         'profession_results': profession_results,
         'address_results': address_results,
-        'professionals': professionals
+        'professionals': professionals,
+        'category_name': query    # Add the category name to the context
     }
     return render(request, 'search.html', context)

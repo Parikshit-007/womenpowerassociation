@@ -13,16 +13,16 @@
                                 <input type="text" class="form-control my-2 my-lg-0" name="name_results" id="name_results" placeholder="What are you looking for">
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
-                                <select class="w-100 form-control my-2 my-lg-0" name="profession_results">
-                                        <option>Category</option>
-                                        <option value="estate_agent">Estate Agent</option>
-                                        <option value="papad_seller">Papad Seller</option>
-                                        <option value="maharaj_swami">Maharaj Swami</option>
-                                        <option value="lada_singer">Lada Singer</option>
-                                        <option value="rasoiyo">Rasoiyo</option>
-                                        <option value="maitinwaro">Maitinwaro</option>
-                                        <option value="maitinwari">Maitinwari</option>
-								</select>
+                                <input type="text" placeholder="Category" name="profession_results" id="profession_results" class="w-100 form-control my-2 my-lg-0" list="categoryList" required>
+                                <datalist id="categoryList">
+                                    <option value="Estate Agent">Estate Agent</option>
+                                    <option value="Papad Seller">Papad Seller</option>
+                                    <option value="Maharaj Swami">Maharaj Swami</option>
+                                    <option value="Lada Singer">Lada Singer</option>
+                                    <option value="Rasoiyo">Rasoiyo</option>
+                                    <option value="Maitinwaro">Maitinwaro</option>
+                                    <option value="Maitinwari">Maitinwari</option>
+                                </datalist>
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
                                 <input type="text" class="form-control my-2 my-lg-0" id="address_results" name="address_results" placeholder="Location">
