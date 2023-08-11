@@ -1,6 +1,7 @@
 <!DOCTYPE html> {% extends 'basic.html' %} {% load static %}
 <html lang="en">
 {% block body %}
+
 <section class="page-search">
     <div class="container">
         <div class="row">
@@ -43,8 +44,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="search-result bg-gray">
-                    <h2>Results For "Electronics"</h2>
-                    <p>123 Results on 12 December, 2017</p>
+                    <h2>Results For "{{ profession_name }}"</h2>
+                    <p>{{ result_count }}</p>
                 </div>
             </div>
         </div>
@@ -148,14 +149,14 @@
     </div>
 </section>{% endblock %}
 <!--============================
-    =            Footer            =
-    =============================-->
-{% block footer %}
-<!-- Your specific content for the footer section goes here -->
-{% endblock %}
+=            Footer            =
+=============================-->
+
+{% block footer %} {% endblock %}
 <!-- 
-    Essential Scripts
-    =====================================-->{% block script %}
+Essential Scripts
+=====================================-->
+{% block script %}
 <!-- Your additional JavaScript code goes here -->
 {% endblock %}
 

@@ -15,8 +15,8 @@
             <div class="col-md-12">
                 <!-- Header Contetnt -->
                 <div class="content-block">
-                    <h1> Sindhi Community Portal </h1>
-                    <p>HELP US HELP YOU ! Vision to register 1 Crore Sindhi’s worldwide approx. on this search engine through authentic registration process
+                    <h1>Women Power Association </h1>
+                    <p>HELP US HELP YOU! Vision to register Women Entrepreneurs Worldwide on this search engine through authentic registration process
                     </p>
                     <div class="short-popular-category-list text-center">
                         <!--<h2>Popular Category</h2>
@@ -52,16 +52,22 @@
                                                 <input type="text" class="form-control my-2 my-lg-1" id="name_results" name="name_results" placeholder="Name">
                                             </div>
                                             <div class="form-group col-lg-3 col-md-6">
-                                                <input type="text" placeholder="Category" name="profession" id="profession" class="form-control w-100 bg-white" list="categoryList" required>
+                                                <input type="text" placeholder="Category" name="category_name" id="category_name" class="form-control w-100 bg-white" list="categoryList" required>
                                                 <datalist id="categoryList">
-                                                    <option value="Estate Agent">Estate Agent</option>
-                                                    <option value="Papad Seller">Papad Seller</option>
-                                                    <option value="Maharaj Swami">Maharaj Swami</option>
-                                                    <option value="Lada Singer">Lada Singer</option>
-                                                    <option value="Rasoiyo">Rasoiyo</option>
-                                                    <option value="Maitinwaro">Maitinwaro</option>
-                                                    <option value="Maitinwari">Maitinwari</option>
+                                                    <option value="Astrologers">Astrologers</option>
+                                                    <option value="Life Coach">Life Coach</option>
+                                                    <option value="Car Rental">Car Rental</option>
+                                                    <option value="Dentist">Dentist</option>
+                                                    <option value="Estate Agents">Estate Agents</option>
+                                                    <option value="Gynaecologist & Obstetrician Doctors">Gynaecologist & Obstetrician Doctors</option>
+                                                    <option value="Gynaecologists-Infertility Treatment">Gynaecologists-Infertility Treatment</option>
+                                                    <option value="24 Hours Gynaecologist Doctors">24 Hours Gynaecologist Doctors</option>
+                                                    <option value="Gynaecologic Oncologist Doctors">Gynaecologic Oncologist Doctors</option>
+                                                    <option value="Surrogacy Doctors">Surrogacy Doctors</option>
+                                                    <option value="High Risk Pregnancy Doctors">High Risk Pregnancy Doctors</option>
+                                                    <option value="Interior Designers">Interior Designers</option>
                                                 </datalist>
+
                                             </div>
 
                                             <div class="form-group col-lg-3 col-md-6">
@@ -95,7 +101,7 @@
             <div class="col-md-12">
                 <div class="section-title">
                     <h2>Our Well Wisher's</h2>
-                    <p>SUPPORT US TO REACH MAXIMUM SINDHIS WORLDWIDE!</p>
+                    <p>SUPPORT US TO REACH MAXIMUM Women Entrepreneurs WORLDWIDE!</p>
                 </div>
             </div>
         </div>
@@ -287,10 +293,10 @@
 
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'papad_seller' %}">
+                            <a href="{% url 'separate_profession' 'astrologer' %}">
                                 <div class="header">
-                                    <i class="fa fa-laptop icon-bg-2"></i>
-                                    <h4>Entrepreneur</h4>
+                                    <i class="fa fa-star icon-bg-2"></i>
+                                    <h4>Astrologers</h4>
                                 </div>
                             </a>
                         </div>
@@ -298,10 +304,10 @@
 
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'maharaj_swami' %}">
+                            <a href="{% url 'separate_profession' 'life_coach' %}">
                                 <div class="header">
-                                    <i class="fa fa-laptop icon-bg-3"></i>
-                                    <h4>Maharaj Swami</h4>
+                                    <i class="fa fa-users icon-bg-3"></i>
+                                    <h4>Life Coach</h4>
                                 </div>
                             </a>
                         </div>
@@ -309,58 +315,65 @@
 
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'lada_singer' %}">
+                            <a href="{% url 'separate_profession' 'car_rental' %}">
                                 <div class="header">
-                                    <i class="fa fa-music icon-bg-4"></i>
-                                    <h4>Lada Singer</h4>
+                                    <i class="fa fa-car icon-bg-4"></i>
+                                    <h4>Car Rental</h4>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'rasoiyo' %}">
+                            <a href="{% url 'separate_profession' 'dentist' %}">
                                 <div class="header">
-                                    <i class="fa fa-laptop icon-bg-5"></i>
-                                    <h4>Rasoiyo</h4>
+                                    <i class="fa fa-tooth icon-bg-5"></i>
+                                    <h4>Dentist</h4>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'maitinwaro' %}">
+                            <a href="{% url 'separate_profession' 'gynaecologist_obstetrician' %}">
                                 <div class="header">
-                                    <i class="fa fa-laptop icon-bg-6"></i>
-                                    <h4>Maitinwaro</h4>
+                                    <i class="fa fa-female icon-bg-6"></i>
+                                    <h4>Gynaecologist & Obstetrician Doctors</h4>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
-                            <a href="{% url 'separate_profession' 'maitinwari' %}">
+                            <a href="{% url 'separate_profession' 'gynaecologist_infertility' %}">
                                 <div class="header">
-                                    <i class="fa fa-laptop icon-bg-7"></i>
-                                    <h4>Maitinwari</h4>
+                                    <i class="fa fa-female icon-bg-7"></i>
+                                    <h4>Gynaecologists-Infertility Treatment</h4>
                                 </div>
                             </a>
                         </div>
                     </div>
+
+                    <!-- Add more categories here -->
+
                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6">
                         <div class="category-block">
                             <div class="header">
-                                <i class="fa fa-music icon-bg-8"></i>
+                                <i class="fa fa-plus-circle icon-bg-8"></i>
                                 <h4>More</h4>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
+
+
             </div>
         </div>
-        <!-- Container End -->
+    </div>
+    <!-- Container End -->
 </section>
 
 
@@ -375,7 +388,8 @@
         <div class="row justify-content-md-center text-center">
             <div class="col-md-8">
                 <div class="content-holder">
-                    <h2>Want to be in Network, with 50 Lakhs Sindhi Community Members?</h2>
+                    <h2>Are you a woman? Want to be in Network, with few Lakhs Women Entrepreneur Community Members?
+                    </h2>
                     <ul class="list-inline mt-30">
                         <li class="list-inline-item"><a class="btn btn-main" href="/main/request-entry/">Register
                                     Now</a></li>

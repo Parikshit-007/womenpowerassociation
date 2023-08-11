@@ -47,8 +47,10 @@
             <div class="col-md-12">
                 <div class="search-result bg-gray">
                     <h2>Results For "{{ category_name }}"</h2>
-                    <p>{{ verified_count|default:0 }} Results on {{ current_date|date:"d F Y" }}</p>
+                    <p>{{ result_count }}</p>
+
                 </div>
+
 
             </div>
         </div>
@@ -102,7 +104,7 @@
                                             <a href="/fullview/{{professional.id}}"><i class="fa fa-calendar"></i>26th December</a>
                                         </li>
                                     </ul>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                                    <p class="card-text">{{professional.desc}}</p>
                                     <div class="product-ratings">
                                         <ul class="list-inline">
                                             <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
@@ -123,9 +125,7 @@
 
 
                 </div>
-            </div>{% endfor %}
-            <p>No results found.</p>
-            {% endif %}
+            </div>{% endfor %} {% endif %}
         </div>
         <div class="pagination justify-content-center">
             <nav aria-label="Page navigation example">

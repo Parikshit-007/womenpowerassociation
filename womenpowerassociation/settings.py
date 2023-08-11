@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-07sif48o2fxg97)=@w!uv$l(m2q+%_pk3bzn*68ogz=(wuv+h^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['156.67.214.154', '127.0.0.1' , 'www.jaijhulelal.com', 'jaijhulelal.com']
+ALLOWED_HOSTS = ['156.67.214.154', '127.0.0.1' , 'www.womenpowerassociation.com', 'womenpowerassociation.com']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Jaijhulelal.wsgi.application'
+WSGI_APPLICATION = 'womenpowerassociation.wsgi.application'
 
 
 # Database
